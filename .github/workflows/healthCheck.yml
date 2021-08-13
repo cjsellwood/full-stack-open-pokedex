@@ -1,14 +1,14 @@
 name: Health Check
 
 on:
-  schedule: 
-    - cron: '47 * * * *'
+  schedule:
+    - cron: "47 * * * *"
 
 jobs:
   url-health-check:
-  runs-on: ubuntu-18.04
-  steps:
-    - name: Check the deployed service URL
-      uses: jtalk/url-health-check-action@v1.5
-      with:
-        url: https://pokedexfso.herokuapp.com/health
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v1.5
+        with:
+          url: https://pokedexfso.herokuapp.com/health
