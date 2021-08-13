@@ -2,16 +2,12 @@ name: Health Check
 
 on:
   schedule:
-    - cron: '52 * * * *'
+    - cron: '01 * * * *'
 
 jobs:
   url-health-check:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
       - name: Check the deployed service URL
         uses: jtalk/url-health-check-action@v1.5
         with:
